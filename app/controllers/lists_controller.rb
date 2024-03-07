@@ -38,7 +38,7 @@ class ListsController < ApplicationController
   private #privateは一種の境界線で、「ここから下はこのcontrollerの中でしか呼び出せません」という意味があります。
   # ストロングパラメータ
   def list_params
-    params.require(:list).permit(:title, :body)
+    params.require(:list).permit(:title, :body, :image)
   end
 
 end
