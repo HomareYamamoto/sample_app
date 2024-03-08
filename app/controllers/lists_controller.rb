@@ -35,6 +35,13 @@ class ListsController < ApplicationController
   end
 
 
+  def destroy
+    list=List.find(params[:id])
+    list.destroy# データ（レコード）を削除
+    redirect_to '/lists'
+  end
+
+
   private #privateは一種の境界線で、「ここから下はこのcontrollerの中でしか呼び出せません」という意味があります。
   # ストロングパラメータ
   def list_params
